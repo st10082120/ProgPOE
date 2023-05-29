@@ -1,3 +1,5 @@
+
+-----------------------------------------------------------------------------------------------------------------------------------
 Prerequisites:
 Visual Studio 2022 - Note, other versions may no work 
 GitHub
@@ -20,11 +22,16 @@ Password: Daniel1562
 * this should not be required, but is here for user-convience
  
 The database has had sample data inserted- 
-to login to an employee account- an Employee superuser has been made 
+to login to an employee account- an Employee and farmer superuser has been made 
 
 Employee:
-UserName = "st10082120";
-Password = "password";
+UserName = "st10082120"
+Password = "password"
 
+UserName = "FarmerGreen"
+Email = "FarmerGreen@gmail.com"
+Password = "password"
 
+unfortunatly, issues with git have resulted in some functions no longer working properly
 
+-----------------------------------------------------------------------------------------------------------------------------------
