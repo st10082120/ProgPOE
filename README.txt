@@ -32,6 +32,6 @@ UserName = "FarmerGreen"
 Email = "FarmerGreen@gmail.com"
 Password = "password"
 
-unfortunatly, issues with git have resulted in some functions no longer working properly
+unfortunatly, issues with git have resulted in some functions no longer working properly, The version uploaded to VClearn may be more accurate
 
 -----------------------------------------------------------------------------------------------------------------------------------
