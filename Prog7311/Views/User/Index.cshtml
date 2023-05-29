@@ -1,0 +1,49 @@
+﻿
+@using Prog7311.Controllers
+@using System.Web.Mvc;
+@using Prog7311.model;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "User"))
+{
+
+    <!--Form fields and submit button -->
+
+    if (ViewBag.displayMenu == "Yes")
+    {
+
+        <!--Farmer Form Link -->
+
+        if (User.IsInRole("Employee"))
+        {
+            <h1> Welcome Employee. You Now Have access to These Functions!</h1>
+
+
+            <li> @Html.ActionLink("Add Farmer", "AddFarmer", "User", new { @class = "btn btn-primary" }) </li>
+            <li>@Html.ActionLink("View Products", "Products", "User", new { @class = "btn btn-primary" })</li>
+            <li>@Html.ActionLink("Filter Products", "FilterProducts", "User", new { @class = "btn btn-primary" })</li>
+
+        }
+
+        <!--Product Form Link -->
+        if (User.IsInRole("Farmer"))
+        {
+            <h1> Welcome Farmer. You Now Have access to These Functions!</h1>
+
+
+            <li> @Html.ActionLink("Add Product", "AddProduct", "User", new { @class = "btn btn-primary" }) </li>
+
+        }
+
+
+    }
+    else
+    {
+        <h2> Welcome < strong > @ViewBag.Name </ strong > :) .We will add user module soon</h2>
+    }
+}
+
+

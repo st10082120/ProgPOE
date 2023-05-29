@@ -1,0 +1,30 @@
+﻿@model List<Prog7311.model.Farmers>
+@{
+    ViewBag.Title = "Products";
+}
+@using (Html.BeginForm("Products", "Farmers", FormMethod.Get))
+{
+    <label for="farmerId">Enter Farmer UserName:</label>
+    <input type="text" name="id" id="farmerId" />
+    <input type="submit" value="View Products" />
+}
+
+<h2>Products Supplied by @ViewBag.FarmerName</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Product</td>
+                <td>@product.ProductType</td>
+            </tr>
+        }
+    </tbody>
+</table>
