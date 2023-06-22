@@ -12,11 +12,11 @@ namespace Prog7311
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            createRolesandUsers();
+            CreateRolesandUsers();
         }
         //-------------------------------------------------------------------------------------------------------------\\
         // creates default User roles and Employee user for login    
-        private void createRolesandUsers()
+        private void CreateRolesandUsers()
         {
             ApplicationDbContext context = new ApplicationDbContext();
 
@@ -43,7 +43,7 @@ namespace Prog7311
                 if (checkUser.Succeeded)
                 {
                     var result1 = UserManager.AddToRole(User.Id, "Employee");
-
+                     
                 }
             }
             // creates a Farmer User     
@@ -52,10 +52,22 @@ namespace Prog7311
 
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
                 role.Name = "Farmer";
-                roleManager.Create(role);
+              //  roleManager.Create(role);
+               
+                    var User = new ApplicationUser();
+                    User.UserName = "FarmerGreen";
+                    User.Email = "FarmerGreen@gmail.com";
+                    string userPWD = "password";
+                var checkUser = UserManager.Create(User, userPWD);
+                if (checkUser.Succeeded)
+                {
+                    var result1 = UserManager.AddToRole(User.Id, "Farmer");
+
+                }
             }
-          
+        }
+
         }
     }
-}
+
 //----------------------------------------------------End of File---------------------------------------------------------------------\\

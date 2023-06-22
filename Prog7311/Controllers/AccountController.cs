@@ -13,6 +13,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Prog7311.model;
+using Prog7311.Models;
+
 //managers and restricts account models
 namespace Prog7311.Controllers
 {

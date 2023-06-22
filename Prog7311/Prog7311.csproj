@@ -252,14 +252,13 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
-    <Content Include="Views\Farmer\AddProduct.cshtml" />
-    <Content Include="Views\Farmer\AddFarmer.cshtml" />
     <Content Include="Views\User\AddFarmer.cshtml" />
     <Content Include="Views\User\AddProduct.cshtml" />
     <Content Include="Views\User\Products.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Farmer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
