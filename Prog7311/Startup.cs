@@ -42,7 +42,7 @@ namespace Prog7311
                 //Add default User to Role Employee    
                 if (checkUser.Succeeded)
                 {
-                    var result1 = UserManager.AddToRole(User.Id, "Employee");
+                   // var result1 = UserManager.AddToRole(User.Id, "Employee");
                      
                 }
             }
@@ -61,13 +61,13 @@ namespace Prog7311
                 var checkUser = UserManager.Create(User, userPWD);
                 if (checkUser.Succeeded)
                 {
-                    var result1 = UserManager.AddToRole(User.Id, "Farmer");
+                    //var result1 = UserManager.AddToRole(User.Id, "Farmer");
 
                 }
             }
         }
 
-        }
     }
+}
 
 //----------------------------------------------------End of File---------------------------------------------------------------------\\
