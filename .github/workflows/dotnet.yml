@@ -20,7 +20,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Setup .NET Framework
+    - name: Setup .NET Framework 4.7.2
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 4.7.2  # Specify the version of .NET Framework you are using
